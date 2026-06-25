@@ -6,7 +6,7 @@ domain: Shopify
 
 # Shopify API
 
-**Last synced:** 2026-06-25 20:07  
+**Last synced:** 2026-06-25 21:32  
 **Base URL:** `http://localhost:5000`
 
 ---
