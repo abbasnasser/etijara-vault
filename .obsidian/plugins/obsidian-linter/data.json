@@ -1,0 +1,15 @@
+{
+  "rules": {
+    "trailing-spaces": { "enabled": true },
+    "heading-blank-lines": { "enabled": true },
+    "paragraph-blank-lines": { "enabled": true },
+    "space-after-list-markers": { "enabled": true },
+    "remove-empty-lines-between-list-markers-and-checklists": { "enabled": true },
+    "proper-ellipsis": { "enabled": false },
+    "no-bare-urls": { "enabled": true },
+    "ordered-list-style": { "enabled": true, "number-style": "ascending", "list-end-style": "." }
+  },
+  "lintOnSave": false,
+  "displayChanged": true,
+  "foldersToIgnore": [".obsidian", "Templates"]
+}

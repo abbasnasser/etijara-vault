@@ -1,0 +1,13 @@
+{
+  "fontFamily": "",
+  "interfaceFontSize": 15,
+  "useMarkdownLinks": false,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "00 - Inbox",
+  "attachmentFolderPath": "assets",
+  "showUnsupportedFiles": false,
+  "defaultViewMode": "source",
+  "livePreview": true,
+  "promptDelete": true,
+  "trashOption": "local"
+}

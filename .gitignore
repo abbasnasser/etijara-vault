@@ -1,0 +1,16 @@
+# Obsidian workspace state (machine-specific)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/graph.json
+
+# Plugin data that should not be shared
+.obsidian/plugins/obsidian-git/data.json
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Trash
+.trash/

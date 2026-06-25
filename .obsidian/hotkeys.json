@@ -1,0 +1,10 @@
+{
+  "editor:toggle-bold": [{ "modifiers": ["Mod"], "key": "B" }],
+  "editor:toggle-italic": [{ "modifiers": ["Mod"], "key": "I" }],
+  "editor:toggle-code": [{ "modifiers": ["Mod"], "key": "`" }],
+  "command-palette:open": [{ "modifiers": ["Mod", "Shift"], "key": "P" }],
+  "switcher:open": [{ "modifiers": ["Mod"], "key": "O" }],
+  "global-search:open": [{ "modifiers": ["Mod", "Shift"], "key": "F" }],
+  "daily-notes:goto-today": [{ "modifiers": ["Mod"], "key": "T" }],
+  "graph:open": [{ "modifiers": ["Mod", "Shift"], "key": "G" }]
+}
