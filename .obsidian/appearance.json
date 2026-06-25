@@ -1,7 +1,9 @@
 {
   "theme": "obsidian",
   "cssTheme": "",
-  "enabledCssSnippets": ["linear-tasks"],
+  "enabledCssSnippets": [
+    "linear-tasks"
+  ],
   "monospaceFontFamily": "",
   "baseFontSize": 16
 }

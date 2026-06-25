@@ -1,0 +1,6 @@
+{
+  "version": "1",
+  "name": "EcomEngine Api",
+  "type": "collection",
+  "ignore": ["node_modules", ".git"]
+}
