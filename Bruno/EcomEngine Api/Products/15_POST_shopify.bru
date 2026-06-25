@@ -1,0 +1,19 @@
+meta {
+  name: POST /api/v1/products/:id/shopify
+  type: http
+  seq: 15
+}
+
+post {
+  url: {{base_url}}/api/v1/products/:id/shopify
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{}
+}

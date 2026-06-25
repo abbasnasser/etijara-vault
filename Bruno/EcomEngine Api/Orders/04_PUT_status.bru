@@ -1,0 +1,21 @@
+meta {
+  name: PUT /api/v1/orders/:id/status
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base_url}}/api/v1/orders/:id/status
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{
+  "status": "active"
+}
+}

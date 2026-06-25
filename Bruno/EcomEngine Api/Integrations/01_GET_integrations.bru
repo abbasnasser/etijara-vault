@@ -1,0 +1,16 @@
+meta {
+  name: GET /api/v1/integrations
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/api/v1/integrations
+  body: 
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+

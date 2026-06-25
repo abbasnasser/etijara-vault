@@ -1,0 +1,19 @@
+meta {
+  name: PUT /api/v1/warehouses/:id
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base_url}}/api/v1/warehouses/:id
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{}
+}

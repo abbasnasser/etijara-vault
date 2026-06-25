@@ -1,0 +1,19 @@
+meta {
+  name: POST /api/v1/integrations/woocommerce/disconnect
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{base_url}}/api/v1/integrations/woocommerce/disconnect
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{}
+}

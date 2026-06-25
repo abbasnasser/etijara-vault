@@ -1,0 +1,20 @@
+meta {
+  name: GET /api/shopify-proxy/products
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/api/shopify-proxy/products
+  body: 
+  auth: bearer
+}
+
+params:query {
+  ~workspace_id: 
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+

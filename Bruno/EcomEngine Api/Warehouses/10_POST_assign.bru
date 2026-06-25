@@ -1,0 +1,23 @@
+meta {
+  name: POST /api/v1/warehouses/inventory/assign
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{base_url}}/api/v1/warehouses/inventory/assign
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{
+  "warehouse_id": "uuid-here",
+  "variant_id": "uuid-here",
+  "quantity": 1
+}
+}

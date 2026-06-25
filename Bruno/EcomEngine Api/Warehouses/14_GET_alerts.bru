@@ -1,0 +1,20 @@
+meta {
+  name: GET /api/v1/warehouses/inventory/alerts
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{base_url}}/api/v1/warehouses/inventory/alerts
+  body: 
+  auth: bearer
+}
+
+params:query {
+  ~resolved: 
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+

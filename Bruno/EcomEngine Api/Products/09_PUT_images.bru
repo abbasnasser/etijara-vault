@@ -1,0 +1,26 @@
+meta {
+  name: PUT /api/v1/products/:id/images/:imageId
+  type: http
+  seq: 9
+}
+
+put {
+  url: {{base_url}}/api/v1/products/:id/images/:imageId
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{
+  "image": {
+    "alt": null,
+    "position": null
+  },
+  "altText": null,
+  "position": null
+}
+}

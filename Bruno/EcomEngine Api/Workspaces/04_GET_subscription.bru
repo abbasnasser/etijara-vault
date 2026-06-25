@@ -1,0 +1,16 @@
+meta {
+  name: GET /api/v1/subscription
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_url}}/api/v1/subscription
+  body: 
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+

@@ -1,0 +1,22 @@
+meta {
+  name: POST /api/v1/customers/:id/notes
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{base_url}}/api/v1/customers/:id/notes
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{
+  "content": "",
+  "created_by": null
+}
+}

@@ -1,0 +1,22 @@
+meta {
+  name: POST /api/v1/customers/:id/tags
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{base_url}}/api/v1/customers/:id/tags
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{
+  "tag": "",
+  "color": null
+}
+}

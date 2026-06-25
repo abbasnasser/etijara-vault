@@ -1,0 +1,20 @@
+meta {
+  name: OPTIONS /api/shopify-proxy/orders
+  type: http
+  seq: 4
+}
+
+options {
+  url: {{base_url}}/api/shopify-proxy/orders
+  body: 
+  auth: bearer
+}
+
+params:query {
+  ~workspace_id: 
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+

@@ -1,0 +1,22 @@
+meta {
+  name: POST /api/v1/auth/verify-otp
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/api/v1/auth/verify-otp
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{
+  "email": "user@example.com",
+  "otp": "123456"
+}
+}

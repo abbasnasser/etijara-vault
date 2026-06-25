@@ -1,0 +1,33 @@
+meta {
+  name: PUT /api/v1/customers/:id
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base_url}}/api/v1/customers/:id
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{
+  "first_name": "John",
+  "last_name": "Doe",
+  "phone": "+966501234567",
+  "address": null,
+  "city": null,
+  "state": null,
+  "zip_code": null,
+  "country": null,
+  "customer_type": null,
+  "notes": "Some notes here",
+  "newsletter": null,
+  "notify_orders": null,
+  "preferred_carrier": null
+}
+}

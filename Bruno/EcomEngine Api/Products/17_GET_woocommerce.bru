@@ -1,0 +1,16 @@
+meta {
+  name: GET /api/v1/products/:id/woocommerce
+  type: http
+  seq: 17
+}
+
+get {
+  url: {{base_url}}/api/v1/products/:id/woocommerce
+  body: 
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+

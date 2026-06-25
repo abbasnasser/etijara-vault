@@ -1,0 +1,19 @@
+meta {
+  name: POST /api/webhooks/shopify/compliance/shop/redact
+  type: http
+  seq: 16
+}
+
+post {
+  url: {{base_url}}/api/webhooks/shopify/compliance/shop/redact
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{}
+}

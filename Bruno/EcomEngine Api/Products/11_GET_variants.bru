@@ -1,0 +1,16 @@
+meta {
+  name: GET /api/v1/products/:id/variants
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{base_url}}/api/v1/products/:id/variants
+  body: 
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+

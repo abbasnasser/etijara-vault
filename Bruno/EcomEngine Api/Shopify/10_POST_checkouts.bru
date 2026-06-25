@@ -1,0 +1,19 @@
+meta {
+  name: POST /api/webhooks/shopify/checkouts
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{base_url}}/api/webhooks/shopify/checkouts
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{}
+}

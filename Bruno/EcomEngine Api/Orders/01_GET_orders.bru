@@ -1,0 +1,22 @@
+meta {
+  name: GET /api/v1/orders
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/api/v1/orders
+  body: 
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+  ~page: 
+  ~status: 
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+

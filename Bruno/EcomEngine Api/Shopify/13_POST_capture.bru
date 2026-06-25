@@ -1,0 +1,19 @@
+meta {
+  name: POST /api/webhooks/shopify/capture
+  type: http
+  seq: 13
+}
+
+post {
+  url: {{base_url}}/api/webhooks/shopify/capture
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{}
+}

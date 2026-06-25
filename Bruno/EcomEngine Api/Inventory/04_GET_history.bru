@@ -1,0 +1,21 @@
+meta {
+  name: GET /api/v1/inventory/:variantId/history
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_url}}/api/v1/inventory/:variantId/history
+  body: 
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+  ~offset: 
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+

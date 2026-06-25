@@ -1,0 +1,19 @@
+meta {
+  name: POST /api/webhooks/woocommerce/products
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{base_url}}/api/webhooks/woocommerce/products
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{}
+}

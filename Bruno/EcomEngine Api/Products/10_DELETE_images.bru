@@ -1,0 +1,16 @@
+meta {
+  name: DELETE /api/v1/products/:id/images/:imageId
+  type: http
+  seq: 10
+}
+
+delete {
+  url: {{base_url}}/api/v1/products/:id/images/:imageId
+  body: 
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+

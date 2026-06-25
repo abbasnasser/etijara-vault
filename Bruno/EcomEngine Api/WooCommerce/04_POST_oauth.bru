@@ -1,0 +1,21 @@
+meta {
+  name: POST /api/v1/integrations/woocommerce/oauth
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/api/v1/integrations/woocommerce/oauth
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{
+  "store_url": "https://example.com/image.jpg"
+}
+}

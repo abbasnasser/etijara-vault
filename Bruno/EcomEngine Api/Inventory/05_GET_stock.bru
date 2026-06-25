@@ -1,0 +1,21 @@
+meta {
+  name: GET /api/v1/stock
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base_url}}/api/v1/stock
+  body: 
+  auth: bearer
+}
+
+params:query {
+  ~sku: 
+  ~variantId: 
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+

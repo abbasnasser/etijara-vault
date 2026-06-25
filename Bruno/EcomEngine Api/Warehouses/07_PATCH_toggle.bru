@@ -1,0 +1,19 @@
+meta {
+  name: PATCH /api/v1/warehouses/:id/toggle
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{base_url}}/api/v1/warehouses/:id/toggle
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{}
+}

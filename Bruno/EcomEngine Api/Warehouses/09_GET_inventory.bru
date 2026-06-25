@@ -1,0 +1,24 @@
+meta {
+  name: GET /api/v1/warehouses/inventory
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{base_url}}/api/v1/warehouses/inventory
+  body: 
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+  ~offset: 
+  ~warehouse_id: 
+  ~variant_id: 
+  ~search: 
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+

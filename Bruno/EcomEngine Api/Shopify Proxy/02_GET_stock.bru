@@ -1,0 +1,22 @@
+meta {
+  name: GET /api/shopify-proxy/stock
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/api/shopify-proxy/stock
+  body: 
+  auth: bearer
+}
+
+params:query {
+  ~workspace_id: 
+  ~sku: 
+  ~variantId: 
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+

@@ -1,0 +1,20 @@
+meta {
+  name: DELETE /api/v1/customers/:id/tags
+  type: http
+  seq: 9
+}
+
+delete {
+  url: {{base_url}}/api/v1/customers/:id/tags
+  body: 
+  auth: bearer
+}
+
+params:query {
+  ~tag: 
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+

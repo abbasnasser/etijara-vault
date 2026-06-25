@@ -1,0 +1,19 @@
+meta {
+  name: POST /api/webhooks/shopify/compliance/customers/data-request
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{base_url}}/api/webhooks/shopify/compliance/customers/data-request
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{}
+}

@@ -1,0 +1,16 @@
+meta {
+  name: GET /api/v1/warehouses/:id/inventory
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{base_url}}/api/v1/warehouses/:id/inventory
+  body: 
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+

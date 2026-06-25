@@ -1,0 +1,16 @@
+meta {
+  name: GET /api/v1/integrations/shopify
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/api/v1/integrations/shopify
+  body: 
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+

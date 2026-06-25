@@ -1,0 +1,16 @@
+meta {
+  name: DELETE /api/v1/products/:id/shopify
+  type: http
+  seq: 16
+}
+
+delete {
+  url: {{base_url}}/api/v1/products/:id/shopify
+  body: 
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+

@@ -1,0 +1,34 @@
+meta {
+  name: POST /api/shopify-proxy/orders
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/api/shopify-proxy/orders
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~workspace_id: 
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{
+  "customerEmail": "",
+  "customerName": "",
+  "currency": "SAR",
+  "items": [{
+    "variantId": "",
+    "sku": "",
+    "title": "Sample Title",
+    "quantity": 1,
+    "price": "29.99"
+  }]
+}
+}

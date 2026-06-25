@@ -1,0 +1,24 @@
+meta {
+  name: POST /api/wc/callback
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/api/wc/callback
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{
+  "user_id": "uuid-here",
+  "consumer_key": "",
+  "consumer_secret": "",
+  "key_permissions": ""
+}
+}

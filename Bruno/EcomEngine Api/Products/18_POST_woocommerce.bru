@@ -1,0 +1,19 @@
+meta {
+  name: POST /api/v1/products/:id/woocommerce
+  type: http
+  seq: 18
+}
+
+post {
+  url: {{base_url}}/api/v1/products/:id/woocommerce
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{}
+}

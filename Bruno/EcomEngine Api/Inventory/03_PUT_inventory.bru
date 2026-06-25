@@ -1,0 +1,25 @@
+meta {
+  name: PUT /api/v1/inventory/:variantId
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{base_url}}/api/v1/inventory/:variantId
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{
+  "action": "",
+  "quantity": 1,
+  "reason": "",
+  "warehouse_id": "uuid-here",
+  "low_stock_threshold": null
+}
+}

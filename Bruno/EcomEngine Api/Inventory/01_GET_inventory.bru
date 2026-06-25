@@ -1,0 +1,23 @@
+meta {
+  name: GET /api/v1/inventory
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/api/v1/inventory
+  body: 
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+  ~offset: 
+  ~search: 
+  ~stockStatus: 
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+

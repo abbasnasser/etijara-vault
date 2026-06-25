@@ -1,0 +1,16 @@
+meta {
+  name: GET /api/v1/customers/:id/notes
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{base_url}}/api/v1/customers/:id/notes
+  body: 
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+

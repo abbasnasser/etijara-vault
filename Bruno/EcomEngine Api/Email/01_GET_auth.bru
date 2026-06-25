@@ -1,0 +1,16 @@
+meta {
+  name: GET /api/email/auth
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/api/email/auth
+  body: 
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+

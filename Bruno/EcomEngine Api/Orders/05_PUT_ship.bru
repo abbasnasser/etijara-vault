@@ -1,0 +1,22 @@
+meta {
+  name: PUT /api/v1/orders/:id/ship
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{base_url}}/api/v1/orders/:id/ship
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{
+  "tracking_number": "",
+  "carrier": ""
+}
+}

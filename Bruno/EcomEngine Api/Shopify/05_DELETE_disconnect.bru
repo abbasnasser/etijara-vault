@@ -1,0 +1,16 @@
+meta {
+  name: DELETE /api/v1/integrations/shopify/disconnect
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{base_url}}/api/v1/integrations/shopify/disconnect
+  body: 
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+

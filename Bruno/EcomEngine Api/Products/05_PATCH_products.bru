@@ -1,0 +1,32 @@
+meta {
+  name: PATCH /api/v1/products/:id
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{base_url}}/api/v1/products/:id
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{auth_token}}
+}
+
+body:json {
+{
+  "product": {
+    "title": "Sample Title",
+    "handle": null,
+    "body_html": "Some notes here",
+    "vendor": null,
+    "product_type": null,
+    "tags": null,
+    "status": "active",
+    "visibility": null,
+    "options": [],
+    "variants": []
+  }
+}
+}
