@@ -1,6 +1,5 @@
 [
   "dataview",
-  "templater-obsidian",
   "obsidian-tasks-plugin",
   "obsidian-git",
   "obsidian-kanban",
@@ -9,5 +8,8 @@
   "obsidian-linter",
   "better-word-count",
   "calendar",
-  "obsidian-mermaid"
+  "obsidian-mermaid",
+  "table-editor-obsidian",
+  "calendar-beta",
+  "obsidian-excalidraw-plugin"
 ]
