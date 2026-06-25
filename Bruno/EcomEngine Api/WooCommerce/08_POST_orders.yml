@@ -1,0 +1,21 @@
+info:
+  name: POST /api/webhooks/woocommerce/orders
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: {{base_url}}/api/webhooks/woocommerce/orders
+  auth:
+    type: bearer
+    token: {{auth_token}}
+  body:
+    mode: json
+    json: |-
+      {}
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

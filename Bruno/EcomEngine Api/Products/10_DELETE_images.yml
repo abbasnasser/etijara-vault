@@ -1,0 +1,17 @@
+info:
+  name: DELETE /api/v1/products/:id/images/:imageId
+  type: http
+  seq: 10
+
+http:
+  method: DELETE
+  url: {{base_url}}/api/v1/products/:id/images/:imageId
+  auth:
+    type: bearer
+    token: {{auth_token}}
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

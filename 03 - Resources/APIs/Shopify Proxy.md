@@ -6,15 +6,108 @@ domain: Shopify Proxy
 
 # Shopify Proxy API
 
-**Last synced:** 2026-06-25 19:35
+**Last synced:** 2026-06-25 19:45  
+**Base URL:** `http://localhost:5000`
 
 ---
 
-## Endpoints
+## `GET` /api/shopify-proxy/products
 
-| Method | Path | Handler |
-|--------|------|----------|
-| `GET` | `/api/shopify-proxy/products` | `Products` |
-| `GET` | `/api/shopify-proxy/stock` | `Stock` |
-| `POST` | `/api/shopify-proxy/orders` | `CreateOrder` |
-| `OPTIONS` | `/api/shopify-proxy/orders` | `CreateOrder` |
+### Query Parameters
+
+| Param | Description |
+|-------|-------------|
+| `workspace_id` | string |
+
+---
+
+## `GET` /api/shopify-proxy/stock
+
+### Query Parameters
+
+| Param | Description |
+|-------|-------------|
+| `workspace_id` | string |
+| `sku` | string — product SKU |
+| `variantId` | string |
+
+---
+
+## `POST` /api/shopify-proxy/orders
+
+### Query Parameters
+
+| Param | Description |
+|-------|-------------|
+| `workspace_id` | string |
+
+### Request Body
+
+```json
+{
+  "customerEmail": "",
+  "customerName": "",
+  "currency": "SAR",
+  "items": [{
+    "variantId": "",
+    "sku": "",
+    "title": "Sample Title",
+    "quantity": 1,
+    "price": "29.99"
+  }]
+}
+```
+
+| Field | Type | Required |
+|-------|------|----------|
+| `customerEmail` | string | **required** |
+| `customerName` | string | **required** |
+| `currency` | string | **required** |
+| `items` | array of objects | optional |
+| `  variantId` | string | **required** |
+| `  sku` | string | **required** |
+| `  title` | string | **required** |
+| `  quantity` | int | **required** |
+| `  price` | float64 | **required** |
+
+---
+
+## `OPTIONS` /api/shopify-proxy/orders
+
+### Query Parameters
+
+| Param | Description |
+|-------|-------------|
+| `workspace_id` | string |
+
+### Request Body
+
+```json
+{
+  "customerEmail": "",
+  "customerName": "",
+  "currency": "SAR",
+  "items": [{
+    "variantId": "",
+    "sku": "",
+    "title": "Sample Title",
+    "quantity": 1,
+    "price": "29.99"
+  }]
+}
+```
+
+| Field | Type | Required |
+|-------|------|----------|
+| `customerEmail` | string | **required** |
+| `customerName` | string | **required** |
+| `currency` | string | **required** |
+| `items` | array of objects | optional |
+| `  variantId` | string | **required** |
+| `  sku` | string | **required** |
+| `  title` | string | **required** |
+| `  quantity` | int | **required** |
+| `  price` | float64 | **required** |
+
+---
+

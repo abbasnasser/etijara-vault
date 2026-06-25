@@ -1,0 +1,22 @@
+info:
+  name: GET /api/v1/warehouses/inventory/alerts
+  type: http
+  seq: 14
+
+http:
+  method: GET
+  url: {{base_url}}/api/v1/warehouses/inventory/alerts
+  params:
+    query:
+      - name: resolved
+        value: ""
+        enabled: false
+  auth:
+    type: bearer
+    token: {{auth_token}}
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

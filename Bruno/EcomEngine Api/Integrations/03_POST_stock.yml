@@ -1,0 +1,23 @@
+info:
+  name: POST /api/v1/integrations/stock
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: {{base_url}}/api/v1/integrations/stock
+  auth:
+    type: bearer
+    token: {{auth_token}}
+  body:
+    mode: json
+    json: |-
+      {
+        "enabled": false
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

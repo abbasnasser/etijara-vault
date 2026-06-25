@@ -6,14 +6,26 @@ domain: Email
 
 # Email API
 
-**Last synced:** 2026-06-25 19:35
+**Last synced:** 2026-06-25 19:45  
+**Base URL:** `http://localhost:5000`
 
 ---
 
-## Endpoints
+## `GET` /api/email/auth
 
-| Method | Path | Handler |
-|--------|------|----------|
-| `GET` | `/api/email/auth` | `Auth` |
-| `GET` | `/api/email/auth/callback` | `AuthCallback` |
-| `GET` | `/api/email/setup` | `Setup` |
+---
+
+## `GET` /api/email/auth/callback
+
+### Query Parameters
+
+| Param | Description |
+|-------|-------------|
+| `code` | string |
+
+---
+
+## `GET` /api/email/setup
+
+---
+

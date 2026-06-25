@@ -1,0 +1,27 @@
+info:
+  name: PUT /api/v1/inventory/:variantId
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: {{base_url}}/api/v1/inventory/:variantId
+  auth:
+    type: bearer
+    token: {{auth_token}}
+  body:
+    mode: json
+    json: |-
+      {
+        "action": "",
+        "quantity": 1,
+        "reason": "",
+        "warehouse_id": "uuid-here",
+        "low_stock_threshold": null
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

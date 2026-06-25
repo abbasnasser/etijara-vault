@@ -1,0 +1,21 @@
+info:
+  name: PUT /api/v1/warehouses/:id
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: {{base_url}}/api/v1/warehouses/:id
+  auth:
+    type: bearer
+    token: {{auth_token}}
+  body:
+    mode: json
+    json: |-
+      {}
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

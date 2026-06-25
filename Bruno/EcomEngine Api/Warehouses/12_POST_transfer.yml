@@ -1,0 +1,27 @@
+info:
+  name: POST /api/v1/warehouses/inventory/transfer
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: {{base_url}}/api/v1/warehouses/inventory/transfer
+  auth:
+    type: bearer
+    token: {{auth_token}}
+  body:
+    mode: json
+    json: |-
+      {
+        "from_warehouse_id": "uuid-here",
+        "to_warehouse_id": "uuid-here",
+        "variant_id": "uuid-here",
+        "quantity": 1,
+        "reason": ""
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

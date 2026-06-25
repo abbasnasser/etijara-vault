@@ -1,0 +1,29 @@
+info:
+  name: POST /api/v1/orders
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: {{base_url}}/api/v1/orders
+  auth:
+    type: bearer
+    token: {{auth_token}}
+  body:
+    mode: json
+    json: |-
+      {
+        "customer_id": "uuid-here",
+        "notes": "Some notes here",
+        "currency": "SAR",
+        "items": [{
+          "variant_id": "uuid-here",
+          "quantity": 1
+        }]
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

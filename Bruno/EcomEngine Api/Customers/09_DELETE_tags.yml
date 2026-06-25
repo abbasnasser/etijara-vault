@@ -1,0 +1,22 @@
+info:
+  name: DELETE /api/v1/customers/:id/tags
+  type: http
+  seq: 9
+
+http:
+  method: DELETE
+  url: {{base_url}}/api/v1/customers/:id/tags
+  params:
+    query:
+      - name: tag
+        value: ""
+        enabled: false
+  auth:
+    type: bearer
+    token: {{auth_token}}
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,17 @@
+info:
+  name: DELETE /api/v1/integrations/shopify/disconnect
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: {{base_url}}/api/v1/integrations/shopify/disconnect
+  auth:
+    type: bearer
+    token: {{auth_token}}
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

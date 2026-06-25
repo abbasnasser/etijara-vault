@@ -1,0 +1,12 @@
+name: Local
+variables:
+  base_url:
+    name: base_url
+    value: http://localhost:5000
+    enabled: true
+    secret: false
+  auth_token:
+    name: auth_token
+    value: ""
+    enabled: true
+    secret: true

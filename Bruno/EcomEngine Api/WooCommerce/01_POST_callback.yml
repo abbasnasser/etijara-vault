@@ -1,0 +1,26 @@
+info:
+  name: POST /api/wc/callback
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: {{base_url}}/api/wc/callback
+  auth:
+    type: bearer
+    token: {{auth_token}}
+  body:
+    mode: json
+    json: |-
+      {
+        "user_id": "uuid-here",
+        "consumer_key": "",
+        "consumer_secret": "",
+        "key_permissions": ""
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

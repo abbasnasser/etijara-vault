@@ -6,12 +6,12 @@ domain: Health
 
 # Health API
 
-**Last synced:** 2026-06-25 19:35
+**Last synced:** 2026-06-25 19:45  
+**Base URL:** `http://localhost:5000`
 
 ---
 
-## Endpoints
+## `GET` /health
 
-| Method | Path | Handler |
-|--------|------|----------|
-| `GET` | `/health` | `Check` |
+---
+

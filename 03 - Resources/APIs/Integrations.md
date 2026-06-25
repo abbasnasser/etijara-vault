@@ -6,14 +6,38 @@ domain: Integrations
 
 # Integrations API
 
-**Last synced:** 2026-06-25 19:35
+**Last synced:** 2026-06-25 19:45  
+**Base URL:** `http://localhost:5000`
 
 ---
 
-## Endpoints
+## `GET` /api/v1/integrations
 
-| Method | Path | Handler |
-|--------|------|----------|
-| `GET` | `/api/v1/integrations` | `List` |
-| `GET` | `/api/v1/integrations/stock` | `GetStock` |
-| `POST` | `/api/v1/integrations/stock` | `UpsertStock` |
+> **Auth required** — Bearer token in `Authorization` header
+
+---
+
+## `GET` /api/v1/integrations/stock
+
+> **Auth required** — Bearer token in `Authorization` header
+
+---
+
+## `POST` /api/v1/integrations/stock
+
+> **Auth required** — Bearer token in `Authorization` header
+
+### Request Body
+
+```json
+{
+  "enabled": false
+}
+```
+
+| Field | Type | Required |
+|-------|------|----------|
+| `enabled` | bool | **required** |
+
+---
+

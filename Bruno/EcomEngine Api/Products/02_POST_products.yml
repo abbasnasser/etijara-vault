@@ -1,0 +1,62 @@
+info:
+  name: POST /api/v1/products
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: {{base_url}}/api/v1/products
+  auth:
+    type: bearer
+    token: {{auth_token}}
+  body:
+    mode: json
+    json: |-
+      {
+        "product": {
+          "title": "Sample Title",
+          "handle": "",
+          "body_html": "Some notes here",
+          "vendor": null,
+          "product_type": null,
+          "tags": null,
+          "status": "active",
+          "options": [{
+            "name": "",
+            "position": 0,
+            "values": []
+          }],
+          "variants": [{
+            "title": "Sample Title",
+            "option1": null,
+            "option2": null,
+            "option3": null,
+            "price": "29.99",
+            "compare_at_price": "29.99",
+            "cost": "29.99",
+            "sku": null,
+            "barcode": null,
+            "inventory_quantity": 0,
+            "inventory_policy": "",
+            "inventory_management": "",
+            "requires_shipping": false,
+            "taxable": false,
+            "weight": null,
+            "weight_unit": "",
+            "status": "active",
+            "image_id": "uuid-here",
+            "position": 0
+          }],
+          "images": [{
+            "src": "https://example.com/image.jpg",
+            "alt": null,
+            "position": 0
+          }]
+        }
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

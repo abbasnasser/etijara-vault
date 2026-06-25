@@ -6,20 +6,108 @@ domain: WooCommerce
 
 # WooCommerce API
 
-**Last synced:** 2026-06-25 19:35
+**Last synced:** 2026-06-25 19:45  
+**Base URL:** `http://localhost:5000`
 
 ---
 
-## Endpoints
+## `POST` /api/wc/callback
 
-| Method | Path | Handler |
-|--------|------|----------|
-| `POST` | `/api/wc/callback` | `Callback` |
-| `GET` | `/api/wc/return` | `Return` |
-| `GET` | `/api/v1/integrations/woocommerce` | `Get` |
-| `POST` | `/api/v1/integrations/woocommerce/oauth` | `OAuth` |
-| `POST` | `/api/v1/integrations/woocommerce/disconnect` | `Disconnect` |
-| `DELETE` | `/api/v1/integrations/woocommerce/disconnect` | `Disconnect` |
-| `POST` | `/api/v1/integrations/woocommerce/test` | `Test` |
-| `POST` | `/api/webhooks/woocommerce/orders` | `WooCommerceOrders` |
-| `POST` | `/api/webhooks/woocommerce/products` | `WooCommerceProducts` |
+### Request Body
+
+```json
+{
+  "user_id": "uuid-here",
+  "consumer_key": "",
+  "consumer_secret": "",
+  "key_permissions": ""
+}
+```
+
+| Field | Type | Required |
+|-------|------|----------|
+| `user_id` | string | **required** |
+| `consumer_key` | string | **required** |
+| `consumer_secret` | string | **required** |
+| `key_permissions` | string | **required** |
+
+---
+
+## `GET` /api/wc/return
+
+---
+
+## `GET` /api/v1/integrations/woocommerce
+
+> **Auth required** — Bearer token in `Authorization` header
+
+---
+
+## `POST` /api/v1/integrations/woocommerce/oauth
+
+> **Auth required** — Bearer token in `Authorization` header
+
+### Request Body
+
+```json
+{
+  "store_url": "https://example.com/image.jpg"
+}
+```
+
+| Field | Type | Required |
+|-------|------|----------|
+| `store_url` | string | **required** |
+
+### Response
+
+```json
+{
+  "redirect_url": ...
+}
+```
+
+---
+
+## `POST` /api/v1/integrations/woocommerce/disconnect
+
+> **Auth required** — Bearer token in `Authorization` header
+
+### Response
+
+```json
+{
+  "status": ...
+}
+```
+
+---
+
+## `DELETE` /api/v1/integrations/woocommerce/disconnect
+
+> **Auth required** — Bearer token in `Authorization` header
+
+### Response
+
+```json
+{
+  "status": ...
+}
+```
+
+---
+
+## `POST` /api/v1/integrations/woocommerce/test
+
+> **Auth required** — Bearer token in `Authorization` header
+
+---
+
+## `POST` /api/webhooks/woocommerce/orders
+
+---
+
+## `POST` /api/webhooks/woocommerce/products
+
+---
+

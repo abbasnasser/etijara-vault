@@ -6,12 +6,31 @@ domain: Upload
 
 # Upload API
 
-**Last synced:** 2026-06-25 19:35
+**Last synced:** 2026-06-25 19:45  
+**Base URL:** `http://localhost:5000`
 
 ---
 
-## Endpoints
+## `GET` /api/v1/upload/presign
 
-| Method | Path | Handler |
-|--------|------|----------|
-| `GET` | `/api/v1/upload/presign` | `Presign` |
+> **Auth required** — Bearer token in `Authorization` header
+
+### Query Parameters
+
+| Param | Description |
+|-------|-------------|
+| `filename` | string |
+| `content_type` | string |
+
+### Response
+
+```json
+{
+  "upload_url": ...
+  "public_url": ...
+  "key": ...
+}
+```
+
+---
+
